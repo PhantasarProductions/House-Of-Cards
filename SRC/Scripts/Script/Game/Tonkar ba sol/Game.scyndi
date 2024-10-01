@@ -21,7 +21,7 @@
 // Please note that some references to data like pictures or audio, do not automatically
 // fall under this licenses. Mostly this is noted in the respective files.
 // 
-// Version: 24.04.08
+// Version: 24.10.01
 // End License Information
 Script
 
@@ -257,7 +257,7 @@ Void DrawCards()
 			plua cc = TBS_Stack[len(TBS_Stack)-1]
 			TBS_Stack[len(TBS_Stack)-1] = nil
 			ra[0]=cc
-			Action.Add("AutoUnstack",TBS_Stack,ra)
+			Action.Add("AutoUnstack",TBS_Stack,{cc},ra)
 		End
 		For ci,cc in ipairs(ra)
 			Victory = Victory && cc.Visible
