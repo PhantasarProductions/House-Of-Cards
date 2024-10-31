@@ -22,7 +22,7 @@
 // 	Please note that some references to data like pictures or audio, do not automatically
 // 	fall under this licenses. Mostly this is noted in the respective files.
 // 
-// Version: 24.10.10 II
+// Version: 24.10.31 II
 // End License
 
 Script
@@ -107,6 +107,7 @@ plua TBS_Deck
 plua TBS_Row
 plua TBS_Stack
 plua TBS_DragCards
+Bool TBS_AllowTime = False
 bool TBS_DidStack
 Int TBS_State
 Int TBS_Moves
@@ -160,6 +161,7 @@ Class Action
 		List.Push(ret)
 		if ret.Act!="AUTOUNSTACK"; TBS_Moves++; End
 		SFX("SLIDE")
+		TBS_AllowTime = True
 	End
 End
 
@@ -250,6 +252,7 @@ End
 
 Void DrawCards()
 	Bool _Dragging = Dragging
+	plua _DoubleML = DoubleML
 	Bool Victory;Victory=TBS_State==0 && Len(TBS_Stack)==0 && !_Dragging
 	TBS_StackX=20
 	For ri,ra in ipairs(TBS_ROW)
@@ -280,12 +283,21 @@ Void DrawCards()
 			End
 			cc.Visible = cc.Visible || ci==len(ra)-1			
 			cc.Draw()
-			If cc.Visible && (!Dragging) && MX>cc.x && MY>cc.y && MX<cc.x+cc.w && MY<cc.y+cc.h && TBS_State==0
-				Hover=ci
+			If cc.Visible && MX>cc.x && MY>cc.y && MX<cc.x+cc.w && MY<cc.y+cc.h && TBS_State==0
+				if (_DoubleML) && (TBS_StackLimit<=0 || Len(TBS_Stack)<TBS_StackLimit) && (ci==len(ra)-1)
+					plua dc;dc=NewArray(cc)
+					AppendArray(TBS_Stack,dc)
+					ra[len(ra)-1]=nil
+					Action.Add("Move",dc,ra,TBS_Stack)
+					break
+				end
+				if (!Dragging)
+					Hover=ci
+				end
 			End
-			if CY+cc.H+10>TBS_StackY && ((cc.GX>=5+TBS_StackX && cc.GX<=5+TBS_StackX+cc.W) || (cc.GX+cc.W>=5+TBS_StackX && cc.GX+cc.W<=5+TBS_StackX+cc.W))
-				TBS_StackX=cc.GX+cc.W+10
-			End
+			//if CY+cc.H+10>TBS_StackY && ((cc.GX>=5+TBS_StackX && cc.GX<=5+TBS_StackX+cc.W) || (cc.GX+cc.W>=5+TBS_StackX && cc.GX+cc.W<=5+TBS_StackX+cc.W))
+			//	TBS_StackX=cc.GX+cc.W+10
+			//End
 		End
 		If Hover>=0
 			plua cc;cc=ra[Hover]
@@ -340,7 +352,8 @@ Int __OldTime
 Void HandleTime()
 	ShowTime(TBS_Time,Graphics.Width div 4,Graphics.Height-30,2)
 	Int __NewTime = os.time()
-	if TBS_State==0 && Action.List.Have && __OldTime!=__NewTime
+	TBS_AllowTime = TBS_AllowTime && TBS_State==0
+	if TBS_AllowTime && Action.List.Have && __OldTime!=__NewTime
 		TBS_Time++
 		__OldTime = __NewTime
 	End
@@ -465,6 +478,7 @@ Global Void GameNew()
 	TBS_State = 0
 	TBS_Stack = {}
 	TBS_DidStack = False
+	TBS_AllowTime = False
 End
 
 Global Void MainFlow()	
