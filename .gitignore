@@ -50,3 +50,6 @@ Clean.rar
 BrokenSeedsByBuggedSyldeyn.rar
 TestMerge.jcr
 /Test
+
+# Files readable by Open Office will have these to lock files, but for a repository they are useless!
+.~lock.*
