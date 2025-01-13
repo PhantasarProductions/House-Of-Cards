@@ -132,6 +132,7 @@ Global Void MainFlow()
 			CFG.NewValue("Seedlog","Signature",MD5(sprintf("House of Cards %d %s",os.time(),os.date())))
 			CSayF("Seedlog on signature %s has been enabled",CFG.Value("SeedLog","Signature"))
 		End
+		CSay("Initiations and start loading done! Let's go to the main menu!")
 		Return
 		//Lua.error("Flow chain to main menu not yet scripted")
 	End
