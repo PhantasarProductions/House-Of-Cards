@@ -130,11 +130,14 @@ End
 
 // I know! Odd to place here, but it's only ONE function, nearly all substates need it anyway, and it saves me a #use clause all the time!
 Global Void DrawBackground()
+	// CSayF("Background: %s",BackDraw)
 	switch BackDraw
 		Case "Draw" "Center"
 			Background.Draw((Graphics.Width div 2)-(Background.width div 2),(Graphics.Height div 2)-(Background.Height div 2))
 		case "Tile" "Stretch"
+			//CSay("Before Draw")
 			Background[BackDraw](0,0,Graphics.width,Graphics.height)
+			//CSay("After Draw")
 		default
 			Cls()
 	End
