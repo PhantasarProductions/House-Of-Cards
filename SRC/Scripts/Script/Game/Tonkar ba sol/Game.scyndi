@@ -92,7 +92,7 @@ Init
 		MSW = math.floor( (Graphics.Height/Mas.Height)*Mas.Width)
 		CSayF("Mascot show size: %dx%d",MSW,MSH)
 	Else
-		CSayF("Apparently there's no entry named '%s' in the JC6 resource, so let's not load that!")
+		CSayF("Apparently there's no entry named '%s' in the JCR6 resource, so let's not load that!",ICN)
 	End		
 End
 #EndRegion
