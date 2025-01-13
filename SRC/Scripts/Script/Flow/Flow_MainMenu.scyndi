@@ -23,7 +23,6 @@
 // 	fall under this licenses. Mostly this is noted in the respective files.
 // 
 // Version: 24.10.10 I
-// End License
 // License Information:
 // House of Cards
 // Main Menu
@@ -49,6 +48,8 @@
 // 
 // Version: 24.04.03
 // End License Information
+// End License
+
 Script
 
 #use "Libs/SCI/Sys"
@@ -135,9 +136,10 @@ Int Hue = os.time()
 ReadOnly Var Fnt  = ObtainFont("RYANNA")
 
 Global Void MainFlow()
-	Hue = (Hue+1)%360
+	Hue = (Hue+1)%360	
 	If Events.AppTerminate(); Sys.Exit(); End
 	DrawBackground()
+	//CSayF("Main.%03d",Hue)
 	Logo.Draw(Graphics.Width div 2,25)
 	Plua Item;Item = MenuItem.First
 	Repeat
