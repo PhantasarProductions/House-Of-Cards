@@ -4,6 +4,7 @@
 
 
  [Check it out on itch.io](https://phantasar-productions.itch.io/house-of-cards)
+ [Check it out on AppImageHub](https://www.appimagehub.com/p/2269807) (Linux Only)
 
 
 ## Supported games
