@@ -23,3 +23,14 @@ The current version of House of Cards supports the following games.
 - [Spider](https://rumble.com/v4j9qj0-how-to-play-spider.html)
 - [Dâ Tônkar bâ sol](https://rumble.com/v4n1jj3-how-to-play-d-tnkrs-b-sol.html)
 - [Yukon](https://rumble.com/v4qjusk-how-to-play-yukon.html)
+
+
+
+
+This repository is at the current time available on [Github](https://github.com/PhantasarProductions/House-Of-Cards.git), [Codeberg](https://codeberg.org/PhantasarProductions/House-Of-Cards.git) and [BitBucket](https://Tricky1975@bitbucket.org/Tricky1975/house-of-cards.git).
+
+GitHub was up to now to main repository, but I am currently thinking about moving that to Codeberg, but even if Codeberg will be the main repository, the github repository will still be updated.
+
+BitBucket's future is most uncertain. The website is quite frequently acting up on me, and their new token system does not appear to work at all (my tokens are always rejected).
+As the WORKING password system is deprecated and will be taken out of use at June 9, 2026, this will mean that the BitBucket repository cannot be updated anymore after this date, anymore.
+
