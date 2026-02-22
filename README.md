@@ -26,7 +26,7 @@ The current version of House of Cards supports the following games.
 
 
 
-
+# Notice!
 This repository is at the current time available on [Github](https://github.com/PhantasarProductions/House-Of-Cards.git), [Codeberg](https://codeberg.org/PhantasarProductions/House-Of-Cards.git) and [BitBucket](https://Tricky1975@bitbucket.org/Tricky1975/house-of-cards.git).
 
 GitHub was up to now to main repository, but I am currently thinking about moving that to Codeberg, but even if Codeberg will be the main repository, the github repository will still be updated.
