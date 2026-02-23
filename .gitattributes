@@ -1,8 +1,5 @@
-# Auto detect text files and perform LF normalization
-# * text=auto
-* text=auto 
-* text eol=lf
-*.png -text
-*.jpg -text
-*.pdf -text
-*.rar -text
+*.scyndi linguist-language=Scyndi linguist-detectable=true
+*.saskia linguist-language=SASKIA linguist-detectable=true
+*.SASKIA linguist-language=SASKIA linguist-detectable=true
+*.aqs linguist-language=Apollo_Quick_Script linguist-detectable=true
+*.neil linguist-language=Neil linquist-detectble=true
