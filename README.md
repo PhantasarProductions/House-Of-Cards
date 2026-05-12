@@ -29,8 +29,10 @@ The current version of House of Cards supports the following games.
 # Notice!
 This repository is at the current time available on [Github](https://github.com/PhantasarProductions/House-Of-Cards.git), [Codeberg](https://codeberg.org/PhantasarProductions/House-Of-Cards.git) and [BitBucket](https://Tricky1975@bitbucket.org/Tricky1975/house-of-cards.git).
 
-GitHub was up to now to main repository, but I am currently thinking about moving that to Codeberg, but even if Codeberg will be the main repository, the github repository will still be updated.
+As of May 12th, 2026, Codeberg is the primary repository and Github secundary. The reposity on Github will still be kept up to date.
 
-BitBucket's future is most uncertain. The website is quite frequently acting up on me, and their new token system does not appear to work at all (my tokens are always rejected).
-As the WORKING password system is deprecated and will be taken out of use at June 9, 2026, this will mean that the BitBucket repository cannot be updated anymore after this date, anymore.
+For Bitbucket, it's definitely certain this repository will remain updated until June 9th, 2026. 
+After that the WORKING password system will be taken out of use and the NOT WORKING system will take its place making it impossible for me to keep the place up-to-date.
+So when you see this file after this date on BitBucket, well, best to move to either GitHub or Codeberg.
+
 
