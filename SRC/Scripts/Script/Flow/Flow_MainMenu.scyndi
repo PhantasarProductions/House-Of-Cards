@@ -87,7 +87,8 @@ Void Config()
 End
 
 Void Bugs()
-	Sys.OpenURL("https://github.com/PhantasarProductions/House-Of-Cards/issues")
+	//Sys.OpenURL("https://github.com/PhantasarProductions/House-Of-Cards/issues")
+	Sys.OpenURL("https://codeberg.org/PhantasarProductions/House-Of-Cards/issues")
 End
 
 Void Achievements()
